@@ -1,0 +1,25 @@
+﻿@model Student
+
+<form method="post">
+    <div>
+        <div>
+            <h2 class="text-dark">Add New Book</h2>
+            <hr />
+        </div>
+        <div>
+            <label asp-for="StudentName"></label>
+            <input asp-for="StudentName" class="form-control" />
+            <span asp-validation-for="StudentName" class="text-danger"></span>
+        </div>
+        <div>
+            <label asp-for="Course"></label>
+            <input asp-for="Course" class="form-control" />
+            <span asp-validation-for="Course" class="text-danger"></span>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-dark" style="width:150px">Create</button>
+        <a asp-controller="Student" asp-action="Index" class="btn btn-dark" style="width:150px">
+            Back to list
+        </a>
+    </div>
+</form>
